@@ -9,15 +9,21 @@ export default {
     size: "md",
     disabled: false,
     helperText: "",
-    error: true,
+    error: false,
     fullWidth: false,
     multiline: false,
     row: 4,
     startIcon: "",
+    endIcon: "",
   },
 };
 
 const Template = (args) => <Input {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  error: false,
+}
 
 export const Error = Template.bind({});
 Error.args = {

@@ -1,17 +1,32 @@
 .input, textarea {
   border: 1px solid #828282;
-
-  min-width: 200px;
   border-radius: 8px;
   margin-top: 6px;
+  padding-inline: 5px;
+  display: flex;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.wrapper {
+  width: 180px;
 }
 
 textarea {
   resize: none;
 }
 
-.input {
-  height: 56px;
+input {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.input > input {
+  border: transparent;
+  width: 100%;
+}
+
+.input > textarea {
+  border: transparent;
+  width: 100%;
 }
 
 .input:hover, textarea:hover {
@@ -20,10 +35,6 @@ textarea {
 .input:focus, textarea:focus {
   border: 1px solid #2962FF;
   outline: transparent;
-}
-
-.input::placeholder, textarea::placeholder {
-  padding-left: 10px;
 }
 
 .input--size-sm {
@@ -66,4 +77,9 @@ label {
 
 .fontawesome {
   font-family: 'Font Awesome 5 Free', 'Noto Sans JP', sans-serif !important;
+}
+
+.material-icons {
+  display: flex;
+  align-items: center;
 }

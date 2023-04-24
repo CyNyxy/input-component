@@ -22,17 +22,19 @@ function Input({
     value,
     size, 
     fullWidth,
+    multiline
   })
 
   return (
     <>
-    <div>
       <label>Label</label><br />
+    <div className={inputClassName} {...props}>
       {multiline ? 
         <textarea placeholder="Placeholder" rows={row} disabled={disabled} className={inputClassName}></textarea> :
         <>
           {startIcon && <span className="material-icons">{startIcon}</span>}
-          <input type="text" placeholder="Placeholder" disabled={disabled} className={inputClassName} {...props} />
+          <input type="text" placeholder="Placeholder" disabled={disabled} />
+          {endIcon && <span className="material-icons">{endIcon}</span>}
         </>
       }
     </div>
@@ -41,10 +43,12 @@ function Input({
   );
 }
 
-function getClassNames({ error, disabled, size, helperText, value, fullWidth }) {
-  const inputClassNames = ["input", "fontawesome"];
+function getClassNames({ error, disabled, size, helperText, value, fullWidth, multiline }) {
+  const inputClassNames = ["input", "fontawesome", "wrapper"];
 
-  inputClassNames.push(`input--size-${size}`);
+  if (!multiline) inputClassNames.push(`input--size-${size}`);
+  
+  // inputClassNames.push(`input--size-${size}`);
 
   inputClassNames.push(`input--value-${value}`);
 
@@ -72,11 +76,12 @@ Input.propTypes = {
   multiline: PropTypes.bool,
   row: PropTypes.number,
   startIcon: PropTypes.string,
+  endIcon: PropTypes.string,
 }
 
 Input.defaultProps = {
   label: "Label",
-  error: true,
+  error: false,
   size: "md",
   disabled: false,
   helperText: "",

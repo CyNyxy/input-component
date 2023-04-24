@@ -1,0 +1,69 @@
+.input, textarea {
+  border: 1px solid #828282;
+
+  min-width: 200px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+textarea {
+  resize: none;
+}
+
+.input {
+  height: 56px;
+}
+
+.input:hover, textarea:hover {
+  border: 1px solid #333;
+}
+.input:focus, textarea:focus {
+  border: 1px solid #2962FF;
+  outline: transparent;
+}
+
+.input::placeholder, textarea::placeholder {
+  padding-left: 10px;
+}
+
+.input--size-sm {
+  height: 40px;
+}
+.input--size-md {
+  height: 56px;
+}
+
+.input--error {
+  border: 1px solid red;
+}
+.input--error:focus {
+  border: 1px solid red;
+}
+
+.input--disabled {
+  border: 1px solid #E0E0E0;
+  background-color: #F2F2F2;
+}
+
+.input--fullwidth {
+  width: 100%;
+}
+
+small {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #828282;
+}
+
+label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.fontawesome {
+  font-family: 'Font Awesome 5 Free', 'Noto Sans JP', sans-serif !important;
+}

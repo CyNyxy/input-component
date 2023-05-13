@@ -31,7 +31,7 @@
 
 ## Overview
 
-<!-- ![screenshot]()-->
+![screenshot](https://i.ibb.co/qJZbJG5/devfrontend02.png)
 
 The solution for this challenge can be found: https://input-component-sb.netlify.app/. 
 

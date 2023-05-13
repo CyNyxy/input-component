@@ -17,6 +17,7 @@ textarea {
 
 input {
   font-family: 'Noto Sans JP', sans-serif;
+  outline: none;
 }
 
 .input > input {
@@ -27,14 +28,14 @@ input {
 .input > textarea {
   border: transparent;
   width: 100%;
+  outline: none;
 }
 
-.input:hover, textarea:hover {
+.input:hover {
   border: 1px solid #333;
 }
-.input:focus, textarea:focus {
+.input:focus-within {
   border: 1px solid #2962FF;
-  outline: transparent;
 }
 
 .input--size-sm {
@@ -65,6 +66,7 @@ small {
   font-weight: 400;
   font-size: 10px;
   color: #828282;
+  margin-left: 2px;
 }
 
 label {

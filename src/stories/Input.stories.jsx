@@ -25,9 +25,39 @@ Default.args = {
   error: false,
 }
 
+export const Small = Template.bind({});
+Small.args = {
+  size: "sm",
+}
+
 export const Error = Template.bind({});
 Error.args = {
   error: true,
+}
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+}
+
+export const Helpertext = Template.bind({});
+Helpertext.args = {
+  helperText: "This is a helper text",
+}
+
+export const Fullwidth = Template.bind({});
+Fullwidth.args = {
+  fullWidth: true,
+}
+
+export const Starticon = Template.bind({});
+Starticon.args = {
+  startIcon: "add",
+}
+
+export const Endicon = Template.bind({});
+Endicon.args = {
+  endIcon: "add",
 }
 
 export const Multiline = Template.bind({});

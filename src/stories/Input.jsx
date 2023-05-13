@@ -9,7 +9,6 @@ function Input({
   helperText, 
   startIcon, 
   endIcon, 
-  value, 
   size, 
   fullWidth, 
   multiline, 
@@ -19,7 +18,6 @@ function Input({
     error,
     disabled,
     helperText,
-    value,
     size, 
     fullWidth,
     multiline
@@ -28,29 +26,25 @@ function Input({
   return (
     <>
       <label>Label</label><br />
-    <div className={inputClassName} {...props}>
-      {multiline ? 
-        <textarea placeholder="Placeholder" rows={row} disabled={disabled} className={inputClassName}></textarea> :
-        <>
-          {startIcon && <span className="material-icons">{startIcon}</span>}
-          <input type="text" placeholder="Placeholder" disabled={disabled} />
-          {endIcon && <span className="material-icons">{endIcon}</span>}
-        </>
-      }
-    </div>
-    {helperText && <small>{helperText}</small>}
-    </>
+      <div className={inputClassName} {...props}>
+        {multiline ? 
+          <textarea placeholder="Placeholder" rows={row} disabled={disabled}></textarea> :
+          <>
+            {startIcon && <span className="material-icons">{startIcon}</span>}
+            <input type="text" placeholder="Placeholder" disabled={disabled} />
+            {endIcon && <span className="material-icons">{endIcon}</span>}
+          </>
+        }
+      </div>
+      {helperText && <small>{helperText}</small>}
+      </>
   );
 }
 
-function getClassNames({ error, disabled, size, helperText, value, fullWidth, multiline }) {
+function getClassNames({ error, disabled, size, helperText, fullWidth, multiline }) {
   const inputClassNames = ["input", "fontawesome", "wrapper"];
 
   if (!multiline) inputClassNames.push(`input--size-${size}`);
-  
-  // inputClassNames.push(`input--size-${size}`);
-
-  inputClassNames.push(`input--value-${value}`);
 
   if (error) inputClassNames.push("input--error");
 
@@ -70,7 +64,6 @@ Input.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   helperText: PropTypes.string,
-  value: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md"]).isRequired,
   fullWidth: PropTypes.bool,
   multiline: PropTypes.bool,

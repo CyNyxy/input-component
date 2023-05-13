@@ -6,13 +6,13 @@
 
 <div align="center">
   <h3>
-    <a href="">
+    <a href="https://input-component-sb.netlify.app" target="_blank">
       Demo
     </a>
-    <span> | </span>
+    <!-- <span> | </span>
     <a href="">
       Solution
-    </a>
+    </a> -->
     <span> | </span>
     <a href="https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp">
       Challenge
@@ -31,15 +31,16 @@
 
 ## Overview
 
-<!-- ![screenshot](https://i.ibb.co/Q60Rp0m/devchallenge07.png)
+<!-- ![screenshot]()-->
 
-The solution for this challenge can be found: https://nyxy-edie-homepage.netlify.app. -->
+The solution for this challenge can be found: https://input-component-sb.netlify.app/. 
 
 
 ### Built With
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev)
+- [Storybook](https://storybook.js.org/)
 
 
 ## Features
@@ -63,8 +64,8 @@ Challenge: Create a reusable input with all the states in the design and a page 
 
 ## Acknowledgements
 
-<!-- - [A Complete Guide to Custom Properties](https://css-tricks.com/a-complete-guide-to-custom-properties/)
-- [How to Toggle an Element in React using React Hooks](https://www.freecodecamp.org/news/toggle-elements-in-react-using-hooks/) -->
+- [Using Vite for Bandler in Storybook](https://miyauchi.dev/posts/storybook-vite/)
+
 
 
 ## Contact
